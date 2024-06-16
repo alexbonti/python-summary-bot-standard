@@ -1,4 +1,6 @@
-from flask import Flask, request, jsonify
+# Created by alessio bonti : Contact alexbonti83@gmail.com
+
+from flask import Flask, request, jsonify,send_from_directory
 import requests
 from ibm_cloud_sdk_core.authenticators import IAMAuthenticator
 import os
@@ -22,8 +24,6 @@ data = {
     "apikey": API_KEY
 }
 
-
-
 def get_iam_token():
     global IAM_TOKEN_EXPIRATION
     response = requests.post(url, headers=headers, data=data, verify=False)
@@ -36,6 +36,15 @@ def get_valid_iam_token():
     if IAM_TOKEN is None or time.time() > IAM_TOKEN_EXPIRATION:
         IAM_TOKEN = get_iam_token()
     return IAM_TOKEN
+
+
+@app.route("/test")
+def test() :
+    return "Hello, World!"
+
+@app.route("/")
+def index():
+    return send_from_directory("static", "index.html")
 
 
 
