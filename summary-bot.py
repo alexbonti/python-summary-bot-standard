@@ -8,7 +8,7 @@ import time
 import threading
 
 # Replace 'your_api_key' with your actual IBM Cloud API key
-API_KEY = 'RfNdFU_4-OKVxnXprcrfC2dlraH06Yu7jiQwPJnTmF9f'
+API_KEY = 'putyourapikeyhere'
 app = Flask(__name__)
 
 IAM_TOKEN = None
