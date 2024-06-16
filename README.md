@@ -16,11 +16,23 @@ This project is a step-by-step guide to deploying a Watsonx.ai summary bot. We'l
 4. **Deploy a web application to be consumed**
 5. **Expand capabilities by using agents**
 
+## Run the application
+
+1. **Clone the project into your system**
+2. **Update the API Key into summary-bot.py**
+3. **Update the URL to the watsonx service from the watsonx deployment dashboard**
+4. **Install the requirements from the requirements.txt using pip**
+5. **Run using python summary-bot.py**
+
+
 ## Video Tutorial
 
-[Insert video placeholder]
+https://youtu.be/YEOv_W715uA?si=edHydocm-PmrOQ_4
 
-## Setting API Key
+## Setting API Key to obtain the Authorization Key
+
+1 Set the API key in the environment 
+2 Make the CURL call , this will return the authorization token - this wil last one hour.
 
 To authenticate with the Watsonx.ai service, set your API key using the following commands:
 
